@@ -617,7 +617,7 @@
                             //秀出所有資料
                             $.ajax({
                                 type: 'POST',
-                                url: "http://localhost:8080/mem/MemSelfInfo",
+                                url: "/CGA101G1/mem/MemSelfInfo",
                                 contentType: "application/json",
                                 success: data => {
                                     let { memNo, memAccount, memName, memMobile, memEmail,
@@ -669,13 +669,13 @@
                                     $("#memBirth").attr("value", memBirth);
                                     //左上角
                                     $("#Ninf").text(memName);
-                                    $("#Pinf").html(`<img src="http://localhost:8080/mem/MemSelfPicServlet?memNo=${memNo}" title="" alt=""
+                                    $("#Pinf").html(`<img src="/CGA101G1/mem/MemSelfPicServlet?memNo=${memNo}" title="" alt=""
                                             id="imgPinf">`)
                                     $("#Einf").text(memEmail);
                                     //圖片顯示
                                     $("#divImg").html(
                                         `<label for="myPic" class="form-label" >會員大頭貼: </label>
-                                            <img src="http://localhost:8080/mem/MemSelfPicServlet?memNo=${memNo}" id="img1" width="50%" height="50%" class="form-control" style="padding: 0; border: 0" />
+                                            <img src="/CGA101G1/mem/MemSelfPicServlet?memNo=${memNo}" id="img1" width="50%" height="50%" class="form-control" style="padding: 0; border: 0" />
                                             <input type="file" name="myPic" id="myPic" onchange="pic()">
                                                 <label id="lup7"></label>`);
                                 }

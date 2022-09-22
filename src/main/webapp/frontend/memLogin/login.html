@@ -307,8 +307,8 @@
 
                     $.ajax({
                         type: 'POST',
-                        //url: "/CGA101G1/mem/LoginServlet",
-                        url: "http://localhost:8080/mem/LoginServlet",
+                        url: "/CGA101G1/mem/LoginServlet",
+                        //url: "http://localhost:8080/mem/LoginServlet",
                         contentType: "application/json",
                         data: JSON.stringify({
                             memAccount: this.memAccount,
@@ -325,8 +325,8 @@
                                 swal("歡迎光臨買鳳(ﾉ>ω<)ﾉ", "", "success")
                                     .then(function () {
                                         if (initlocation !== undefined) {
-                                           // location = initlocation;
-                                            location = "/CGA101G1/frontend/HomePage/HomePage.html";
+                                           location = initlocation;
+                                            //location = "/CGA101G1/frontend/HomePage/HomePage.html";
                                         } else {
                                             location = "/CGA101G1/frontend/HomePage/HomePage.html";
                                         }
